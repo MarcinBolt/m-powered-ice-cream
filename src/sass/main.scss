@@ -2,12 +2,22 @@
 
 /* Components */
 @import './components/variables';
+@import './components/scroll-smooth';
 @import './components/body';
 @import './components/container';
 @import './components/hamburger';
-@import './components/mobile-menu';
-@import './components/footer';
-@import './components/advantages';
+@import './components/modal';
+@import './components/pop-up-modal';
+@import './components/form';
+@import './components/swiper';
 
 /* Partials*/
+@import './partials/mobile-menu';
+@import './partials/hero-header';
+@import './partials/products';
 @import './partials/gallery';
+@import './partials/about';
+@import './partials/advantages';
+@import './partials/contacts';
+@import './partials/customer-reviews';
+@import './partials/footer';

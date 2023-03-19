@@ -1,32 +1,110 @@
 .gallery {
-  &__wrapper {
-    width: 100%;
-    height: 122px;
-    background-size: 364px 122px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background: linear-gradient (180deg, $fourth-background 48px, $base-body-background 48px);
-    background-image: url('../images/gallery-mobile.jpg');
-    @include mobile-retina {
-      background-image: url('../images/gallery-mobile@2x.jpg');
-    }
-    @include tablet {
-      height: 264px;
-      background-size: 786px 264px;
-      background: linear-gradient (180deg, $fourth-background 103px, $base-body-background 103px);
-      background-image: url('../images/gallery-tablet.jpg');
-    }
-    @include tablet-retina {
-      background-image: url('../images/gallery-tablet@2x.jpg');
-    }
+  width: 100%;
+  background-position: center;
+  background-color: $fourth-background;
+  background-repeat: no-repeat;
+  background: linear-gradient(
+    to bottom,
+    $fourth-background 68px,
+    $fifth-background 68px,
+    $fifth-background
+  );
+  @include tablet {
+    background: linear-gradient(
+      to bottom,
+      $fourth-background 113px,
+      $fifth-background 113px,
+      $fifth-background
+    );
     @include desktop {
-      background-size: 1280px 430px;
-      height: 430px;
-      background: linear-gradient (180deg, $fourth-background 171px, $base-body-background 171px);
-      background-image: url('../images/gallery-desktop.jpg');
+      background: linear-gradient(
+        to bottom,
+        $fourth-background 171px,
+        $fifth-background 171px,
+        $fifth-background
+      );
     }
-    @include desktop-retina {
-      background-image: url('../images/gallery-desktop@2x.jpg');
+  }
+}
+.gallery__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+.gallery__wrapper {
+  &:not(:last-child) {
+    margin-right: 3px;
+  }
+  @include tablet {
+    &:not(:last-child) {
+      margin-right: 4px;
     }
+  }
+  @include desktop {
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+}
+.gallery__title {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+}
+.gallery__list {
+  list-style-type: none;
+  padding: 0;
+}
+.gallery__list-second-column {
+  padding-top: 24px;
+  @include tablet {
+    padding-top: 54px;
+  }
+  @include desktop {
+    padding-top: 86px;
+  }
+}
+.gallery__list-fourth-column {
+  padding-top: 28px;
+  @include tablet {
+    padding-top: 45px;
+  }
+  @include desktop {
+    padding-top: 98px;
+  }
+}
+.gallery__list-fifth-column {
+  padding-top: 14px;
+  @include tablet {
+    padding-top: 33px;
+  }
+  @include desktop {
+    padding-top: 50px;
+  }
+}
+
+.gallery__item {
+  &:not(:last-child) {
+    margin-bottom: 3px;
+  }
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+  @include desktop {
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+}
+.gallery__image {
+  transition: transform 1500ms linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
   }
 }
