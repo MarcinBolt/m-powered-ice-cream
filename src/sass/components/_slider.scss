@@ -1,0 +1,30 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.slider__item {
+  &:not(:last-child) {
+    margin-right: 18px;
+  }
+}
+
+.slider__icon {
+  fill: $second-icon-color;
+
+  &--active {
+    fill: $first-icon-color;
+  }
+}
+.swiper-pagination-bullet {
+  background-color: $second-icon-color;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: $first-icon-color;
+}
