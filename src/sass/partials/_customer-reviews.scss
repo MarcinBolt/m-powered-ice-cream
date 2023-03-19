@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   background-color: $fifth-background;
   padding: 80px 86px 86px;
 
@@ -19,6 +20,22 @@
 .customer-reviews__header {
   position: absolute;
   visibility: hidden;
+}
+
+<<<<<<< HEAD
+.customer-reviews__slide {
+=======
+.customer-reviews__customer {
+>>>>>>> b3c21d8b367e001d268398cbe023130a50a6ca12
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+<<<<<<< HEAD
+  margin: 0 auto;
+  width: 100%;
+=======
+>>>>>>> b3c21d8b367e001d268398cbe023130a50a6ca12
 }
 
 .customer-reviews__picture {

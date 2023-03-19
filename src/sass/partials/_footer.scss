@@ -7,7 +7,7 @@
     position: absolute;
     bottom: 89px;
     display: block;
-    width: 100vw;
+    width: 100%;
     height: 1px;
     background-color: $first-border-color;
 
@@ -120,6 +120,7 @@
     width: 32px;
     height: 32px;
     background-color: $social-media-background;
+    transition: all 250ms ease-in-out;
 
     &:hover,
     &:focus {
@@ -174,7 +175,7 @@
     display: inline-block;
     text-decoration: none;
     color: $brand-color;
-    font-family: 'DM Sans';
+    font-family: $main-font;
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -220,7 +221,46 @@
     @include tablet {
       display: flex;
       flex-direction: row;
+      align-items: center;
       gap: 3px;
+    }
+  }
+
+  &__copyright-list-element {
+    position: relative;
+  }
+
+  &__m-powered-logo {
+    position: absolute;
+    left: -43px;
+    top: 11px;
+    scale: 0;
+    will-change: scale;
+    transition-property: scale;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__copyright-list:hover &__m-powered-logo {
+    scale: 2.2;
+  }
+
+  @include tablet {
+    .footer__m-powered-logo {
+      left: -45px;
+      top: 0;
+    }
+    .footer__copyright-list:hover .footer__m-powered-logo {
+      scale: 2;
+    }
+  }
+  @include desktop {
+    .footer__m-powered-logo {
+      left: -40px;
+      top: -2px;
+    }
+    .footer__copyright-list:hover .footer__m-powered-logo {
+      scale: 1.25;
     }
   }
 }
